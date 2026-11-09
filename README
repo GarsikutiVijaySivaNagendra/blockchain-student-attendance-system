@@ -1,0 +1,49 @@
+Blockchain-Based Student Attendance System
+
+Project Overview
+
+This project is a blockchain-based student attendance management system developed using Ethereum smart contracts. It helps maintain transparent, secure, and reliable student attendance records.
+
+Technologies Used
+
+- Solidity
+- Remix IDE
+- Ethereum Sepolia Test Network
+- MetaMask
+- HTML
+- CSS
+- JavaScript
+- Ethers.js
+
+Main Features
+
+- Connect MetaMask wallet
+- Register students
+- Mark students as Present or Absent
+- View student details
+- View attendance history
+- Check attendance percentage
+- Store attendance records on the blockchain
+
+Smart Contract
+
+The smart contract is written in Solidity and deployed on the Ethereum Sepolia test network.
+
+Project Files
+
+- "StudentAttendance.sol" – Smart contract
+- "index.html" – Website structure
+- "style.css" – Website design
+- "app.js" – Blockchain interaction and application logic
+
+Network
+
+Ethereum Sepolia Test Network
+
+Deployment
+
+The application connects to the deployed smart contract using MetaMask.
+
+Developed By
+
+Team 07– G.V.S.Nagendra,V.Gowthaman,B.Srihari,K.Ganesh
