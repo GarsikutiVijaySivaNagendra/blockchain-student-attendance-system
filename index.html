@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Blockchain Student Attendance System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <header class="main-header">
+            <h1>Blockchain Student Attendance System</h1>
+            <p>Secure and Transparent Student Attendance Management</p>
+
+            <button id="connectButton" class="connect-btn">
+                Connect MetaMask
+            </button>
+
+            <p id="walletAddress">Wallet Not Connected</p>
+        </header>
+
+
+        <!-- STATUS -->
+        <div id="status" class="status">
+            Please connect MetaMask to continue.
+        </div>
+
+
+        <!-- ADD STUDENT -->
+        <section class="card">
+
+            <h2>Add Student</h2>
+
+            <div class="form-row">
+
+                <input
+                    type="text"
+                    id="studentName"
+                    placeholder="Student name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="registerNumber"
+                    placeholder="Register number"
+                    min="1"
+                    required
+                >
+
+                <button id="addStudentButton" class="primary-btn">
+                    Add Student
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- STUDENT ATTENDANCE -->
+        <section class="card">
+
+            <h2>Student Attendance</h2>
+
+            <p>Select Present or Absent for every student.</p>
+
+            <div class="table-container">
+
+                <table id="attendanceTable">
+
+                    <thead>
+                        <tr>
+                            <th>S.No</th>
+                            <th>Student Name</th>
+                            <th>Present</th>
+                            <th>Absent</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="attendanceTableBody">
+
+                        <tr>
+                            <td colspan="4">
+                                Connect MetaMask to load new students.
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+            <button
+                id="submitAttendanceButton"
+                class="success-btn"
+            >
+                Submit Attendance
+            </button>
+
+        </section>
+
+
+        <!-- VIEW STUDENT -->
+        <section class="card">
+
+            <h2>View Student</h2>
+
+            <div class="form-row">
+
+                <input
+                    type="number"
+                    id="viewStudentId"
+                    placeholder="Enter Student ID"
+                    min="1"
+                >
+
+                <button id="viewStudentButton" class="primary-btn">
+                    View Student
+                </button>
+
+            </div>
+
+            <div id="studentDetails" class="result-box"></div>
+
+        </section>
+
+
+        <!-- ATTENDANCE HISTORY -->
+        <section class="card">
+
+            <h2>Student Attendance History</h2>
+
+            <div class="form-row">
+
+                <input
+                    type="number"
+                    id="historyStudentId"
+                    placeholder="Enter Student ID"
+                    min="1"
+                >
+
+                <button id="historyButton" class="primary-btn">
+                    View History
+                </button>
+
+            </div>
+
+            <div id="attendanceHistory" class="result-box"></div>
+
+        </section>
+
+
+        <!-- CLASS ATTENDANCE -->
+        <section class="card">
+
+            <h2>Class Attendance Report</h2>
+
+            <div class="form-row">
+
+                <input
+                    type="date"
+                    id="classAttendanceDate"
+                >
+
+                <button
+                    id="classAttendanceButton"
+                    class="primary-btn"
+                >
+                    View Class Attendance
+                </button>
+
+            </div>
+
+            <div id="classAttendance" class="result-box"></div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <p>Blockchain-Based Student Attendance System</p>
+            <p>Secure • Transparent • Reliable</p>
+        </footer>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
